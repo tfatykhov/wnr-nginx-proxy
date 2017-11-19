@@ -71,6 +71,7 @@ server {
     }
 }
 ```
+###### If you want to serve multiple external domains you need to copy file above and make changes accordingly. Each new external domain name should have it's own configuration file.
 
 14. Save the file and navigate back to wnr-nginx-proxy:
 ```
