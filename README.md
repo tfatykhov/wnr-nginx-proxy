@@ -1,6 +1,10 @@
 #### This documentation assumes that you already have docker installed. I recoommend to use Hypriot OS (https://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/)
 #### Also, this documentation shows how to use host local folders for persistence. You can mount a NFS/CIFS/ISCSI file system to your host and use that instead. There are plenty resources on how to mount NAS storage on the internet.
 
+Main idea is - your external domain name --> your external provider assigned ip address -> your router port forward ports 80 and 443 to your raspberry pi where you plan to run nginx-proxy container. You may set multiple external donain names pointing to your external ip address. Nginx will figure it out based on the external name and forward your requests to proper service inside. This means that you do not need to expose different hosts/ports via port forwarding. Everything will go via single nginx docker container running on raspberry pi. Nginx will be used for SSL terminationas well which means that you do not need to secure each internal site eventhough you still can do that if you want. By default it will be:<br> 
+```
+{INTERNET] <----> HTTPS<--->your router<----->HTTPS<----->your nginx container<--->HTTP/HTTPS<--->your internal host.
+```
 ### Steps:
 for the purpose of this documentation I assume that you use default hypriot OS user is <b>pirate</b> if you use raspbian jessie and your user id is <b>pi</b> or anything else - adjust steps below accordingly.
 Also my assumtion is that you know how to copy files to unix box or how to create and edit files using either 'vi' or 'nano' editors
