@@ -78,7 +78,8 @@ server {
 ###### If you want to serve multiple external domains you need to copy file above and make changes accordingly. Each new external domain name should have it's own configuration file.
 
 14. Now you need to copy generated privatekey.key as <you-external-domain-name>.key by executing following command assuming that your external domain name is <b>wnr.mydomain.com</b>:
-``` cp $HOME/secrets/privatekey.key $HOME/secrets/wnr.mydomain.com.key
+```
+cp $HOME/secrets/privatekey.key $HOME/secrets/wnr.mydomain.com.key
 ````
 15. Save the file and navigate back to wnr-nginx-proxy:
 ```
