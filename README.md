@@ -71,17 +71,17 @@ server {
     }
 }
 ```
-```
-12. Save the file and navigate back to wnr-nginx-proxy:
+
+14. Save the file and navigate back to wnr-nginx-proxy:
 ```
 cd $HOME/wnr-nginx-proxy
 ```
-13. now it is time to start your nginx container by executing:
+15. now it is time to start your nginx container by executing:
 ```
 ./build.sh
 ```
-14. if everything is OK you should see nginx logs. you can interrupt those by Ctrl-C
-15. make sure your container is running by executing:
+16. if everything is OK you should see nginx logs. you can interrupt those by Ctrl-C
+17. make sure your container is running by executing:
 ```
 docker container ls
 ```
