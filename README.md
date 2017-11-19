@@ -77,14 +77,15 @@ server {
 ```
 ###### If you want to serve multiple external domains you need to copy file above and make changes accordingly. Each new external domain name should have it's own configuration file.
 
-14. Now you need to copy generated privatekey.key as <you-external-domain-name>.key by executing following command assuming that your external domain name is <b>wnr.mydomain.com</b>:
-```
-cp $HOME/secrets/privatekey.key $HOME/secrets/wnr.mydomain.com.key
-````
-15. Save the file and navigate back to wnr-nginx-proxy:
+14. Save the file and navigate back to wnr-nginx-proxy:
 ```
 cd $HOME/wnr-nginx-proxy
 ```
+15. Now you need to copy generated privatekey.key as <you-external-domain-name>.key by executing following command assuming that your external domain name is <b>wnr.mydomain.com</b>:
+```
+cp $HOME/secrets/privatekey.key $HOME/secrets/wnr.mydomain.com.key
+````
+
 16. ### Now make sure that your external domain name is actually registered and your router forwarding port 80 & 443 to your raspberry pi internal ip address. Without that you will not be able to generate SSL cert!
 
 17. Ok, it is time to start your nginx container by executing:
