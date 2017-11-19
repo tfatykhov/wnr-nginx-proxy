@@ -3,7 +3,7 @@
 
 Main idea is - your external domain name --> your external provider assigned ip address -> your router port forward ports 80 and 443 to your raspberry pi where you plan to run nginx-proxy container. You may set multiple external donain names pointing to your external ip address. Nginx will figure it out based on the external name and forward your requests to proper service inside. This means that you do not need to expose different hosts/ports via port forwarding. Everything will go via single nginx docker container running on raspberry pi. Nginx will be used for SSL terminationas well which means that you do not need to secure each internal site eventhough you still can do that if you want. By default it will be:<br> 
 ```
-{INTERNET] <----> HTTPS<--->your router<----->HTTPS<----->your nginx container<--->HTTP/HTTPS<--->your internal host.
+[INTERNET] <--->HTTPS<--->[your router]<--->HTTPS<---->[your nginx container]<--->HTTP/HTTPS<--->[your internal host].
 ```
 ### Steps:
 for the purpose of this documentation I assume that you use default hypriot OS user is <b>pirate</b> if you use raspbian jessie and your user id is <b>pi</b> or anything else - adjust steps below accordingly.
