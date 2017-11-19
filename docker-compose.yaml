@@ -1,0 +1,17 @@
+version: '2.1'
+
+services:
+  nginx:
+   image: tfatykhov/nginx-proxy:1.0
+   environment:
+     - CA=https://acme-v01.api.letsencrypt.org
+     - DOMAINS=<put your external domain here (example mywnr.myexternaldomain.com)>
+
+   ports:
+     - 80:80
+     - 443:443
+
+   volumes:
+     - $HOME/certs:/etc/nginx/certs
+     - $HOME/secrets:/etc/secrets
+   restart: always
