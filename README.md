@@ -85,12 +85,14 @@ cp $HOME/secrets/privatekey.key $HOME/secrets/wnr.mydomain.com.key
 ```
 cd $HOME/wnr-nginx-proxy
 ```
-16. now it is time to start your nginx container by executing:
+16. ### Now make sure that your external domain name is actually registered and your router forwarding port 80 & 443 to your raspberry pi internal ip address. Without that you will not be able to generate SSL cert!
+
+17. Ok, it is time to start your nginx container by executing:
 ```
 ./build.sh
 ```
-17. if everything is OK you should see nginx logs. you can interrupt those by Ctrl-C
-18. make sure your container is running by executing:
+18. if everything is OK you should see nginx logs. you can interrupt those by Ctrl-C
+19. make sure your container is running by executing:
 ```
 docker container ls
 ```
