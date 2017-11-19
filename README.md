@@ -77,16 +77,19 @@ server {
 ```
 ###### If you want to serve multiple external domains you need to copy file above and make changes accordingly. Each new external domain name should have it's own configuration file.
 
-14. Save the file and navigate back to wnr-nginx-proxy:
+14. Now you need to copy generated privatekey.key as <you-external-domain-name>.key by executing following command assuming that your external domain name is <b>wnr.mydomain.com</b>:
+``` cp $HOME/secrets/privatekey.key $HOME/secrets/wnr.mydomain.com.key
+````
+15. Save the file and navigate back to wnr-nginx-proxy:
 ```
 cd $HOME/wnr-nginx-proxy
 ```
-15. now it is time to start your nginx container by executing:
+16. now it is time to start your nginx container by executing:
 ```
 ./build.sh
 ```
-16. if everything is OK you should see nginx logs. you can interrupt those by Ctrl-C
-17. make sure your container is running by executing:
+17. if everything is OK you should see nginx logs. you can interrupt those by Ctrl-C
+18. make sure your container is running by executing:
 ```
 docker container ls
 ```
