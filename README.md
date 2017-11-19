@@ -90,3 +90,5 @@ cd $HOME/wnr-nginx-proxy
 ```
 docker container ls
 ```
+
+#### If you need to make any changes - start from step 8 and add/modify files as needed. Executing ./build.sh will stop/regenerate/start nginx-proxy service.
