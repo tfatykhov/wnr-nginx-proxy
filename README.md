@@ -29,7 +29,7 @@ chmod +x build.sh
 ```
 ./init.sh
 ```
-####this will take some time as it will generate several required RSA keys for strong SSL support
+#### this will take some time as it will generate several required RSA keys for strong SSL support
 7. Now you need to select and register your external host name. Assumtion is you should know how to do it using popular dynDns services like no-ip.org or dyndns.org. Alternatively you might register your own domain but all we need at the end - proper domain name routed to your home external ip address.
 8. Edit docker-compose.yaml, find line starting with -DOMAINS= and put your external domain name after '='. For example if we assume that your external domain name is 'wnr.mydomain.com' then that line in yaml file should look like:
 ``` 
