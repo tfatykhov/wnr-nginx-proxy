@@ -55,7 +55,7 @@ server {
     server_name wnr.mydomain.com;
     client_max_body_size 2048m;
     ssl_certificate /etc/nginx/certs/wnr.mydomain.com-chained.pem;
-    ssl_certificate_key /etc/secrets/privatekey.key;
+    ssl_certificate_key /etc/secrets/wnr.mydomain.com.key;
     ssl_dhparam /etc/secrets/dhparams.pem;
 
     ssl_protocols TLSv1.2;
