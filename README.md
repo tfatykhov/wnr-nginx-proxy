@@ -50,8 +50,8 @@ If you want to serve multiple external domain names you should add them using ';
 13. Open renamed file for edit. In that file, you should look for "server_name", ssl_certificate, and proxy_pass lines and fill it with your actual values. If we assume that your external domain name is wnr.mydomain.com and your internal wnr ip is 192.168.1.12 and your internal wnr port is 1880 and wnr itself is server via https then your config file name in https folder should be <b>wnr.mydomain.com.</b> and contents of the file should be:
 ```
 server {
-    listen 443 ssl http2;
-    listen [::]:443 ssl http2;
+    listen 443 ssl;
+    listen [::]:443 ssl;
     server_name wnr.mydomain.com;
     client_max_body_size 2048m;
     ssl_certificate /etc/nginx/certs/wnr.mydomain.com-chained.pem;
